@@ -11,7 +11,9 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy your app code
-COPY . .
+COPY app/ .
 
 # Run the app by default
 CMD ["python", "app.py"]
+
+# for testing CMD ["python","-u" "app.py"]

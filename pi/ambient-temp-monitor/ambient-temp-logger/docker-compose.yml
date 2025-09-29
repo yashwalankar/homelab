@@ -1,0 +1,14 @@
+services:
+  ambient-temp-logger:
+    build: .
+    restart: unless-stopped
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0
+    environment:
+      - SERIAL_PORT=/dev/ttyACM0
+      - BAUD_RATE=115200
+      # InfluxDB configuration - UPDATE THESE VALUES
+      - INFLUXDB_URL=${INFLUXDB_URL}
+      - INFLUXDB_TOKEN=${INFLUXDB_RASPI_TOKEN}
+      - INFLUXDB_ORG=${INFLUXDB_ORG}
+      - INFLUXDB_BUCKET=${INFLUXDB_HOMELAB_AMBIENT_TEMP_BUCKET}

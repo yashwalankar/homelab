@@ -8,4 +8,4 @@
    * Using MuEditor REPL on serial or  >> cat /dev/{PORT}
        * usually  `/dev/cu.usbmodem2101` on mac or `cat /dev/ttyACM0` on linux/pi
 
-### 3 . Read through the serial port using python in Docker
+### 3 . Python Script in Docker to read serial port and send to InfluxDB
