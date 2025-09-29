@@ -10,10 +10,10 @@ services:
     restart: always
     hostname: "raspberry_pi"
     environment:
-      - INFLUX_URL=${INFLUX_URL}
-      - INFLUX_TOKEN=${INFLUX_RASPI_TOKEN}
-      - INFLUX_ORG=${INFLUX_ORG}
-      - INFLUX_BUCKET=${INFLUX_RASPI_BUCKET}
+      - INFLUXDB_URL=${INFLUXDB_URL}
+      - INFLUXDB_TOKEN=${INFLUXDB_RASPI_TOKEN}
+      - INFLUXDB_ORG=${INFLUXDB_ORG}
+      - INFLUXDB_BUCKET=${INFLUXDB_RASPI_ONBOARD_METRICS_BUCKET}
     privileged: true
 # networks:
 #   default:
