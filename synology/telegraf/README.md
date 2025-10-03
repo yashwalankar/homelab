@@ -1,0 +1,1 @@
+# Setting up Telegraf with SNMP on Synology
