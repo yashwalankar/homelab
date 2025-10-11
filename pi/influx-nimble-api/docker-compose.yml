@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - INFLUXDB_URL=${INFLUXDB_URL}
+      - INFLUXDB_TOKEN=${INFLUXDB_RASPI_TOKEN}
+      - INFLUXDB_ORG=${INFLUXDB_ORG}
+    restart: unless-stopped
+    mem_limit: 64m
+    cpus: 0.5
